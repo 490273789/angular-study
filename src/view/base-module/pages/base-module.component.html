@@ -1,1 +1,19 @@
-123
+<h2>Data Binding</h2>
+<h3>1、data text binding</h3>
+<div class="row-style">{{ title }}</div>
+<div class="row-style">2 + 5 = {{ 2 + 5 }}</div>
+
+<h3>2、html binding</h3>
+<div class="row-style" [innerHTML]="htmlContent"></div>
+
+<h2>Attribute Binding</h2>
+<div class="row-style" [id]="id" title="msg">please use develop tools see me</div>
+
+<h2>Data Loop -- *ngFor</h2>
+<div class="row-style">
+<ul>
+    <li *ngFor="let item of heroList">
+        {{item}}
+    </li>
+</ul>
+</div>
