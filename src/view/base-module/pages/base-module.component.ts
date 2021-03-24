@@ -16,9 +16,15 @@ export class BaseComponent implements OnInit {
   public htmlContent: string;
   public id: string;
   public msg: string;
-  public heroList: [];
+  public heroList: [{name: 'wsn'}];
+  public isShow: boolean;
   constructor() {}
 
+  /**
+   * @description: Angular life sycle
+   * @param {*}
+   * @return {*}
+   */
   ngOnInit(): void {
     this.initData();
   }
@@ -28,5 +34,15 @@ export class BaseComponent implements OnInit {
     this.htmlContent = 'use the [innerHTML] parse';
     this.id = '123';
     this.msg = 'bind property';
+    this.isShow = true;
+  }
+
+  /**
+   * control show function
+   *
+   * @memberof BaseComponent
+   */
+  public controlIsShow(): void {
+    this.isShow = !this.isShow;
   }
 }
