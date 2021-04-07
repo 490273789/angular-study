@@ -144,6 +144,7 @@
     "component-selector": [
       true,
       "element",
+      "wsn",
       "kebab-case"
     ]
   }

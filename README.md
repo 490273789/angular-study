@@ -30,4 +30,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ng g component components/header
 
+## tslint配置
+
+"component-selector": [
+      true,
+      "element",
+      "wsn", // 配置selector的命名前戳只能以wsn
+      "kebab-case"
+]
+
 
