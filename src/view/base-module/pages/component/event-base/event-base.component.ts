@@ -8,17 +8,40 @@ import { Component, OnInit } from '@angular/core';
 export class EventBaseComponent implements OnInit {
   constructor() {}
 
-  public ngOnInit() {}
+  /**
+   * angular lifecycle
+   *
+   * @memberof EventBaseComponent
+   */
+  public ngOnInit(): void {}
 
+  /**
+   * click event
+   *
+   * @memberof EventBaseComponent
+   */
   public showText(): void {
     alert('click 触发！');
   }
 
+  /**
+   * click inner circular
+   *
+   * @param {MouseEvent} event
+   * @param {string} position
+   * @memberof EventBaseComponent
+   */
   public clickInner(event: MouseEvent, position: string): void {
     event.stopPropagation();
     alert('click ' + position);
   }
 
+  /**
+   * click outer circular
+   *
+   * @param {string} position
+   * @memberof EventBaseComponent
+   */
   public clickOuter(position: string): void {
     alert('click ' + position);
   }

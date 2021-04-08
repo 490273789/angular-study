@@ -1,13 +1,13 @@
-import { RouterTestingModule } from '@angular/router/testing';
-
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
+import { FormModuleComponent } from './pages/form-module.component';
+
 const routes: Routes = [
-//   { path: 'base-module', component: BaseComponent },
+  { path: 'form-module', component: FormModuleComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class BaseRoutingModule {}
+export class FormRoutingModule {}

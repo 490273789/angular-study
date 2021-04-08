@@ -1,19 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 .button {
-    display: inline-block;
-    border-radius: 5px;
-    padding: 5px 10px;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 .success {
-    background-color: #67c23a;
-    color: #fff;
+  background-color: #67c23a;
+  color: #fff;
 }
 .primary {
-    background-color: #6666ff;
-    color: #fff;
+  background-color: #6666ff;
+  color: #fff;
 }
 
 .split-line {
-    border: 1px solid #6666ff;
-    margin: 20px 10px;
+  border: 1px solid #6666ff;
+  margin: 20px 10px;
 }

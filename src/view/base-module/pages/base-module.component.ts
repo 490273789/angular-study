@@ -70,7 +70,7 @@ export class BaseComponent implements OnInit {
     this.styleExpression = {
       backgroundColor: '#abcdef',
       color: '#ff6666',
-      width: '100px'
+      width: '100px',
     };
   }
 
