@@ -12,14 +12,16 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 // 根组件
 import { AppComponent } from './app.component';
+import { LayoutComponent } from 'src/layout/layout.component';
 
 // @NgModule接受一个元数据对象，告诉Angular如何编译和启动应用。被NgModule修饰过的类，就叫做AngularModule
-@NgModule({// 此对象为元数据
+@NgModule({
+  // 此对象为元数据
   // 引入当前项目运行的组件、指令和管道
   // 一个组件只能被一个模块声明
   // 模块中不能使用未声明过的组件（未添加到declarations数组中的组件）
   // 在这里的组件默认只能在当前模块中使用，要想其他模块使用，必须exports出去
-  declarations: [AppComponent],
+  declarations: [AppComponent, LayoutComponent],
   // 引入当前模块运行依赖的其他模块，存放的一定是NgModule，可能是自己写的，也可能是引入的插件以及内部Module
   imports: [BrowserModule, AppRoutingModule],
   // 定义服务，放在这里面

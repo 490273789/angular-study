@@ -1,1 +1,12 @@
-form
+<div class="form-wrap">
+  <h2>ngModule</h2>
+  <div class="row-style">
+    <input type="text" [(ngModel)]="item" />
+    <div class="button success" (click)="addItem()">添加</div>
+    <div class="input-content">{{ item }}</div>
+    <h4>item list:</h4>
+    <ul>
+      <li *ngFor="let item of itemList; let i = index">{{ i + 1 }}: {{ item }}</li>
+    </ul>
+  </div>
+</div>

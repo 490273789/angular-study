@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
 .button {
   display: inline-block;
   border-radius: 5px;
@@ -18,4 +23,10 @@
 .split-line {
   border: 1px solid #6666ff;
   margin: 20px 10px;
+}
+
+.row-style {
+  border: 1px solid #66ff99;
+  padding: 4px 10px;
+  margin: 4px 0;
 }
