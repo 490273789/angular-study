@@ -42,6 +42,8 @@ export class BaseComponent implements OnInit {
   public buttonStyle2: object;
   public buttonStyle3: string[];
   public styleExpression: StyleExpression;
+  public showDialog: boolean;
+  public fontSize: number;
   constructor() {}
 
   /**
@@ -52,7 +54,12 @@ export class BaseComponent implements OnInit {
   public ngOnInit(): void {
     this.initData();
   }
-
+  /**
+   * init data
+   *
+   * @private
+   * @memberof BaseComponent
+   */
   private initData(): void {
     this.title = 'bind title';
     this.gender = 1;
@@ -72,6 +79,8 @@ export class BaseComponent implements OnInit {
       color: '#ff6666',
       width: '100px',
     };
+    this.showDialog = false;
+    this.fontSize = 16;
   }
 
   /**
@@ -82,5 +91,15 @@ export class BaseComponent implements OnInit {
    */
   public getValue(): string {
     return '可以写变量、函数、判断或运算';
+  }
+
+  /**
+   * control dialog show and hidden
+   *
+   * @memberof BaseComponent
+   */
+  public controlDialog(value?: string): void {
+    console.log(value);
+    this.showDialog = !this.showDialog;
   }
 }

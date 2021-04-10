@@ -1,36 +1,55 @@
-<!-- 引入第三方插件 -->
-<h2>引入第三方插件</h2>
-<div class="alert alert-success" role="alert">bootstrap</div>
-<h2>Data Binding</h2>
-<h3>1、data text binding</h3>
-<div class="row-style">{{ getValue() }}</div>
-<div class="row-style">{{ title }}</div>
-<div class="row-style">2 + 5 = {{ 2 + 5 }}</div>
-<div class="row-style">性别： {{ gender === 0 ? '男' : '女' }}</div>
+<div class="base-module-wrap">
+  <!-- 引入第三方插件 -->
+  <h2>引入第三方插件</h2>
+  <div class="alert alert-success" role="alert">bootstrap</div>
+  <h2>Data Binding</h2>
+  <h3>1、data text binding</h3>
+  <div class="row-style">{{ getValue() }}</div>
+  <div class="row-style">{{ title }}</div>
+  <div class="row-style">2 + 5 = {{ 2 + 5 }}</div>
+  <div class="row-style">性别： {{ gender === 0 ? '男' : '女' }}</div>
 
-<h3>2、html binding</h3>
-<div class="row-style" [innerHTML]="htmlContent"></div>
+  <h3>2、html binding</h3>
+  <div class="row-style" [innerHTML]="htmlContent"></div>
 
-<h3>3、Attribute Binding</h3>
-<div class="row-style" [title]="titleOne" title="msg">shwo title 1</div>
-<div class="row-style" bind-title="titleTwo" title="msg">shwo title 2</div>
-<div class="row-style" title="{{ titleThree }}" title="msg">shwo title 3</div>
-<div class="row-style" [attr.data-title]="customerTitle">绑定自定义属性</div>
+  <h3>3、Attribute Binding</h3>
+  <div class="row-style" [title]="titleOne" title="msg">shwo title 1</div>
+  <div class="row-style" bind-title="titleTwo" title="msg">shwo title 2</div>
+  <div class="row-style" title="{{ titleThree }}" title="msg">shwo title 3</div>
+  <div class="row-style" [attr.data-title]="customerTitle">绑定自定义属性</div>
 
-<h2>Binding class</h2>
-<div>
-    <div class="button" [class.blueBackground]="isBlueBackground" [class.whiteFont]="isWhiteFont">绑定单个class</div>
+  <h2>Binding class</h2>
+  <div>
+    <div class="button" [class.blueBackground]="isBlueBackground" [class.whiteFont]="isWhiteFont">
+      绑定单个class
+    </div>
     <div [class]="buttonStyle1">绑定多个class1</div>
     <div [class]="buttonStyle2">绑定多个class2</div>
     <div [class]="buttonStyle3">绑定多个class3</div>
-</div>
+  </div>
 
-<h2>Binding style</h2>
-<div>
+  <h2>Binding style</h2>
+  <div>
     <div [style.color]="'#ff6666'" [style.height]="'50px'">style 绑定方式1</div>
     <div [style.height.px]="'50'">style 绑定方式2</div>
-    <div [style]="styleExpression">style 绑定方式3</div>        
-</div>
+    <div [style]="styleExpression">style 绑定方式3</div>
+  </div>
 
-<h2>Event</h2>
-<wsn-event-base></wsn-event-base>
+  <h2>Event</h2>
+  <wsn-event-base></wsn-event-base>
+
+  <h2>ngIf</h2>
+
+  <h2>ngFor</h2>
+
+  <h2>input - output</h2>
+  <div class="button" (click)="controlDialog('show')">show dialog</div>
+  <wsn-dialog
+    [isShow]="showDialog"
+    title="hello angular"
+    content="angular base"
+    [(fontSize)]="fontSize"
+    buttonFont="ok"
+    (closeDialog)="controlDialog($event)"
+  ></wsn-dialog>
+</div>

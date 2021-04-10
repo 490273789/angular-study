@@ -1,0 +1,19 @@
+<div class="dialog-wrap" *ngIf="isShow">
+  <div class="dialog">
+    <div class="dialog-header">
+      {{ title }}
+    </div>
+    <div class="dialog-body">
+      <div class="computed">
+        {{ content }}
+        <div class="split-line"></div>
+        <div class="button success" (click)="inc()">+</div>
+        <div class="button primary" (click)="dec()">-</div>
+        <div [style.fontSize.px]="fontSize">fontSize:{{ fontSize }}px</div>
+      </div>
+    </div>
+    <div class="dialog-footer">
+      <div class="button primary" (click)="clickClose()">{{ buttonText }}</div>
+    </div>
+  </div>
+</div>
